@@ -1,9 +1,9 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { CreateStockDto } from './dtos/CreateStock.dto';
+import { CreateStockDto } from './dto/CreateStock.dto';
 import { stock_list as StockListEntity } from '../typeorm/stock_list';
 import { Repository } from 'typeorm';
-import { UpdateStockDto } from './dtos/UpdateStock.dto';
+import { UpdateStockDto } from './dto/UpdateStock.dto';
 
 @Injectable()
 export class StockListService {

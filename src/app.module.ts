@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { StockListModule } from './StockList/StockList.module';
+import { GeneralInfoModule } from './GeneralInfo/GeneralInfo.module';
 import entities from './typeorm';
 
 @Module({
@@ -16,6 +17,7 @@ import entities from './typeorm';
       synchronize: true,
     }),
     StockListModule,
+    GeneralInfoModule,
   ],
   controllers: [],
   providers: [],

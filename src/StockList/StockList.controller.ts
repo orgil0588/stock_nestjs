@@ -6,13 +6,13 @@ import {
   Inject,
   Param,
   ParseIntPipe,
-  Patch,
   Post,
+  Put,
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
-import { CreateStockDto } from './dtos/CreateStock.dto';
-import { UpdateStockDto } from './dtos/UpdateStock.dto';
+import { CreateStockDto } from './dto/CreateStock.dto';
+import { UpdateStockDto } from './dto/UpdateStock.dto';
 import { StockListService } from './StockList.service';
 @Controller('stock-list')
 export class StockListController {
@@ -37,7 +37,7 @@ export class StockListController {
     return this.stockListService.getStockFindById(id);
   }
 
-  @Patch(':id')
+  @Put(':id')
   updateStock(
     @Param('id', ParseIntPipe) id: number,
     @Body() updateStockDto: UpdateStockDto,

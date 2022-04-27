@@ -70,7 +70,7 @@ export class general_info {
   authorized_officer_names: {
     name: string;
     job_title: string;
-    shared_stock_percentage: string;
+    shared_stock_percentage: number;
   };
   @Column({
     type: 'json',
@@ -78,14 +78,14 @@ export class general_info {
   board_member: {
     name: string;
     membership: string;
-    shared_stock_percentage: string;
+    shared_stock_percentage: number;
   };
   @Column({
     type: 'json',
   })
   influential_shareholders: {
     name: string;
-    shared_stock_percentage: string;
+    shared_stock_percentage: number;
     ownership_shares_other_company: string;
     affiliated_person: string;
   };
